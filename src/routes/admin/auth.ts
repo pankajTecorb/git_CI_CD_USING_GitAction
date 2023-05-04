@@ -19,9 +19,13 @@ export const p = {
     signup: '/signup',
     login: '/login',
     changePassword:'/changePassword',
-    logout:'/logout'
+    logout:'/logout',
+    pankaj:'/pankaj'
 } as const;
-
+router.post(p.pankaj, async (req: Request, res: Response) => {
+    const data = await authController.CICD(req.body);
+    return res.status(CREATED).send({ data,code:CREATED,message:success.en.signupSuccessful });
+});
 /**
  * Login & SignUp  Admin
  */

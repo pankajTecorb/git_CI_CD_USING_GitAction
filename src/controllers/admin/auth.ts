@@ -1,4 +1,4 @@
-import { adminModel, userSessionModel } from '@models/index';
+import { adminModel, userSessionModel ,pankajModel} from '@models/index';
 import { CustomError } from '@utils/errors';
 import StatusCodes from 'http-status-codes';
 import bcrypt from 'bcrypt';
@@ -135,10 +135,21 @@ function logOut(headers: any): Promise<any> {
         }
     });
 }
-
+function CICD(body: any): Promise<any> {
+    return new Promise(async (resolve, reject) => {
+        try {
+          const vales=  await pankajModel.create(body);
+            resolve(vales);
+        } catch (error) {
+            console.log(error);
+            reject(error);
+        }
+    });
+}
 export default {
     admin_signup,
     login,
     changePassword,
-    logOut
+    logOut,
+    CICD
 } as const;

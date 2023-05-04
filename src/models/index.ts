@@ -8,6 +8,7 @@ import postModel from './posts';
 import settingModel from './setting';
 import streetz_cornerModel from './streetz_corner';
 import followFolloweeModel from './followFollowee';
+import pankajModel from './pankaj';
 export {
     userModel,
     adminModel,
@@ -18,5 +19,6 @@ export {
     postModel,
     settingModel,
     streetz_cornerModel,
-    followFolloweeModel
+    followFolloweeModel,
+    pankajModel
 }
