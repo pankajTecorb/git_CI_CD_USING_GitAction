@@ -27,7 +27,7 @@ export const errors = {
         "errorInSendingOtp": "Error in sending otp, please try again later",
         "incorrectPin":"Please enter correct Pin",
         "pinExpired": "Pin has been expired",
-        "userWithSameEmail": "User with same Email already exist(pankaj).",
+        "userWithSameEmail": "User with same Email already exist.",
         "userAddressExist":"This user already have adress with this city and state",
         "alreadyFollow":"You Already follow this User",
 
