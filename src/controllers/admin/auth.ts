@@ -146,10 +146,14 @@ function CICD(body: any): Promise<any> {
         }
     });
 }
+
+
+
 export default {
     admin_signup,
     login,
     changePassword,
     logOut,
     CICD
+  
 } as const;

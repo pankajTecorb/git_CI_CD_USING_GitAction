@@ -20,8 +20,10 @@ export const p = {
     login: '/login',
     changePassword:'/changePassword',
     logout:'/logout',
-    pankaj:'/pankaj'
+    pankaj:'/pankaj',
+    
 } as const;
+
 router.post(p.pankaj, async (req: Request, res: Response) => {
     const data = await authController.CICD(req.body);
     return res.status(CREATED).send({ data,code:CREATED,message:success.en.signupSuccessful });

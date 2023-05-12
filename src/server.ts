@@ -48,7 +48,9 @@ app.use('/api/v1', apiRouter);
 // Admin api router
 app.use('/api/v1/admin', adminRoutesBE);
 
-
+app.get('/api/v1/details', (req,res) =>{
+    res.json({"name":"pankaj" , "email":"pankajkmr474@gmail.com"})
+});
 
 // Error handling
 app.use((err: Error | CustomError, _: Request, res: Response, __: NextFunction) => {
